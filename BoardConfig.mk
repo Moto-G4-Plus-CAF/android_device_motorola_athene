@@ -159,7 +159,8 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /vendor/lib64/lib-imsvt.so|libshims_ims.so \
-    /vendor/lib/hw/camera.msm8952.so|libshims_camera.so
+    /vendor/lib/hw/camera.msm8952.so|libshims_camera.so \
+    /vendor/lib/libmmcamera_chromaflash_lib.so|/vendor/lib/libshim_chromaflash.so
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_athene

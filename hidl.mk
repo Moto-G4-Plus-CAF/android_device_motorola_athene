@@ -17,7 +17,8 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
-    android.hardware.camera.provider@2.4-impl:32
+    android.hardware.camera.provider@2.4-impl:32 \
+    android.hardware.camera.provider@2.4-impl
 
 # Crypto
 PRODUCT_PACKAGES += \
@@ -82,7 +83,8 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-	android.hardware.power@1.1-service-qti
+	android.hardware.power@1.0 \
+	android.hardware.power-service-qti
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \

@@ -1,0 +1,6 @@
+cc_library_shared {
+    srcs: ["camera_chromaflash.cpp"],
+    name: "libshim_chromaflash",
+    shared_libs: ["libutils","libui"],
+    proprietary: true,
+}
