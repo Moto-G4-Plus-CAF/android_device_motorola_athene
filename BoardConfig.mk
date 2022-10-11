@@ -60,7 +60,7 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CONFIG := athene_defconfig
-TARGET_KERNEL_SOURCE := kernel/motorola/msm8952
+TARGET_KERNEL_SOURCE := kernel/motorola/athene
 
 # Audio
 AUDIO_FEATURE_ENABLED_AAC_ADTS_OFFLOAD := true
