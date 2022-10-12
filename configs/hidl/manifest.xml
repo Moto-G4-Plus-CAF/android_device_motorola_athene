@@ -265,15 +265,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.wifi</name>
-        <transport>hwbinder</transport>
-        <version>1.4</version>
-        <interface>
-            <name>IWifi</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
 
     <!-- framework_manifest.xml -->
     <hal format="hidl">
