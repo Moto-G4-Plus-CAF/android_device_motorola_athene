@@ -133,8 +133,7 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     libbson \
-    libshims_camera \
-    libshim_chromaflash
+    libshims_camera
 
 PRODUCT_PACKAGES += \
     Doze
