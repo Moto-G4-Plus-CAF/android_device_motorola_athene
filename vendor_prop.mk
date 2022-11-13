@@ -46,17 +46,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	vendor.audio_hal.period_size=240 \
 	persist.audio.endcall.delay=250
 
-# Debug
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp,adb \
-    ro.adb.secure=0 \
-    ro.secure=0 \
-    ro.debuggable=1
-
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
 	bluetooth.hfp.client=1 \
-	qcom.bluetooth.soc=smd \
+	qcom.bluetooth.soc=pronto \
 	vendor.qcom.bluetooth.soc=pronto \
 	ro.bluetooth.hfp.ver=1.7 \
 	ro.qualcomm.bt.hci_transport=smd \
@@ -71,19 +64,23 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	camera.lowpower.record.enable=1 \
 	persist.vendor.camera.display.umax=1920x1080 \
 	persist.vendor.camera.display.lmax=1280x720 \
-	persist.camera.HAL3.enabled=1 \
+	persist.camera.HAL3.enabled=0 \
 	persist.camera.gyro.disable=0 \
 	camera.hal1.packagelist=com.skype.raider \
 	media.camera.ts.monotonic=1
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
-	persist.cne.feature=1 \
-	persist.sys.cnd.iwlan=1 \
+	persist.vendor.cne.feature=1 \
+	persist.vendor.cnd.iwlan=1 \
 	persist.vendor.cne.logging.qxdm=0 \
 	persist.vendor.cne.rat.wlan.chip.oem=WCN \
 	persist.vendor.dpm.feature=0 \
 	persist.vendor.sys.cnd.iwlan=1
+
+# Codec2 switch
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.media.codec2=2
 
 # Coresight
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -180,7 +177,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-	rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
+	rild.libpath=/vendor/lib/libril-qc-qmi-1.so \
 	rild.libargs=-d[SPACE]/dev/smd0 \
 	DEVICE_PROVISIONED=1 \
 	persist.vendor.radio.no_wait_for_card=1 \
@@ -249,6 +246,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.radio.apm_sim_not_pwdn=1 \
 	persist.vendor.radio.lte_vrte_ltd=1 \
 	persist.vendor.radio.cs_srv_type=1 \
+	persist.vendor.radio.jbims=1
 
 # Rescue party
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -268,7 +266,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vendor.use_data_netmgrd=true \
 	persist.data.netmgrd.qos.enable=true \
 	persist.data.mode=concurrent \
-	persist.vendor.data.mode=concurrent \
 	persist.data.iwlan.enable=true
 
 # SurfaceFlinger
